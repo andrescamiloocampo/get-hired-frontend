@@ -1,0 +1,1 @@
+export { ActiveCvComponent } from "./active-cv/active-cv.component";

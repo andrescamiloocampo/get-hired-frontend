@@ -1,0 +1,66 @@
+.main-dashboard {
+    color: white;
+    padding: 1.5rem;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.insights{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.profile-strength, .cv-views, .downloads, .job-matches{
+    flex: 1 1 200px; 
+    max-width: 300px;
+}
+
+.active-cv {    
+    flex: 2 2 200px;   
+    max-width: 700px; 
+    min-width: 200px;
+}
+
+.top-job-matches {
+    flex: 1 1 200px;    
+    max-width: 530px;
+    background-color: #38bdf8;
+}
+
+.recent-activity {
+    grid-area: recent-activity;
+    background-color: #7dd3fc;
+}
+
+.skills-breakdown {
+    grid-area: skills-breakdown;
+    background-color: #bae6fd;
+}
+
+.main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.job-container {
+    width: 100%;
+    display: flex;        
+    margin: 0;
+    gap: 1rem;        
+    flex-wrap: wrap;
+}
+
+

@@ -1,0 +1,62 @@
+.title{
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.strength{
+ font-size: 1.5rem;   
+ color: #f1f5f9;
+ font-weight: 700;
+}
+
+.profile-strength{
+    width: 100%;
+    padding: 1rem;
+    background: #1e293b;    
+    border: solid 1px #334155;
+    border-radius: 0.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0.5rem;    
+    appearance: initial;
+    -webkit-appearance: none;
+}
+
+.progress-bar::-webkit-progress-bar {
+    background-color: #334155; 
+    border-radius: 0.5rem;
+}
+
+.progress-bar::-webkit-progress-value {
+    background-color: #3b82f6; 
+    border-radius: 0.5rem;
+}
+
+.progress-bar::-moz-progress-bar {
+    background-color: #3b82f6; 
+    border-radius: 0.5rem;
+}
+
+.suggestion{
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.heading-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon{
+    display: flex;
+    padding: 2px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    background: #1e3a8a4d;
+    color: #60a5fa;
+    width: fit-content;    
+}

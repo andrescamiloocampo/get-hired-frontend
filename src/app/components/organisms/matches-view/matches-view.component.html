@@ -1,0 +1,19 @@
+<div class="matches">
+  <div class="heading-content">
+    <p class="title">Job Matches</p>
+    <div class="icon">
+      <mat-icon>handshake</mat-icon>
+    </div>
+  </div>
+  <div class="content">
+    <h1 class="matches-count">
+      {{ matches }}
+    </h1>
+
+    @if(matches > 0) {
+    <p class="matches-message">You have {{ matches }} job matches</p>
+    } @else {
+    <p class="matches-message">There is no matches yet</p>
+    }
+  </div>
+</div>

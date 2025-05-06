@@ -1,0 +1,14 @@
+@let renderProgress = progress();
+
+<div class="profile-strength">
+    <div class="heading-content">
+        <p class="title">Profile Strength</p>
+        <div class="icon">
+            <mat-icon>stars</mat-icon>
+        </div>
+    </div>
+    
+    <p class="strength">{{renderProgress}}%</p>
+    <progress class="progress-bar" max="100" value={{renderProgress}}></progress>
+    <p class="suggestion">Add skills</p>
+</div>

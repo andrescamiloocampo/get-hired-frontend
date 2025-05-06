@@ -1,0 +1,30 @@
+<div class="circular-progress">
+  <p class="title">{{title}}</p>
+  <div class="content">
+    <svg
+      [attr.width]="svgSize"
+      [attr.height]="svgSize"
+      viewBox="0 0 100 100"      
+    >
+      <circle
+        class="circle-bg"
+        cx="50"
+        cy="50"
+        [attr.r]="radius"
+      ></circle>
+    
+      <circle
+        class="circle"
+        cx="50"
+        cy="50"
+        [attr.r]="radius"
+        [attr.stroke-dasharray]="circumference"
+        [attr.stroke-dashoffset]="strokeDashoffset"
+      ></circle>
+    
+      <text x="50" y="50" class="text">{{ value }}/{{ max }}</text>
+    </svg>
+    <p class="content-value">{{value}}%</p>
+  </div>
+</div>
+

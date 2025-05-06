@@ -1,0 +1,31 @@
+<section class="main-dashboard">
+  <p class="title">Dashboard</p>
+  <div class="subtitle">Welcome back, Andres. Your CV is getting noticed!</div>
+  <div class="insights">
+    <div class="profile-strength">
+      <app-strength [progress]="80" />
+    </div>
+    <div class="cv-views">
+      <app-views />
+    </div>
+    <div class="downloads">
+      <app-downloads />
+    </div>
+    <div class="job-matches">
+      <app-matches-view />
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="job-container">
+      <div class="active-cv">
+        <app-active-cv />
+      </div>
+      <div class="top-job-matches">Top Job Matches</div>
+    </div>
+    <div class="stats-container">
+      <div class="recent-activity">Recent Activity</div>
+      <div class="skills-breakdown">Skills Breakdown</div>
+    </div>
+  </div>
+</section>

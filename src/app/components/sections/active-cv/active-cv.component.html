@@ -1,0 +1,35 @@
+<section class="active-cv">
+    <div class="heading-content">
+        <h1 class="title">Active CV</h1>
+        <div class="controls">
+            <button class="control-btn">
+                <mat-icon>edit_note</mat-icon>
+              </button>
+            <button class="control-btn">
+                <mat-icon>download</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="content">
+        <app-icon-card [size]="{width: '180px', height:'200px'}"/>
+        <div class="progress-stats">
+            <div class="description">
+                <p class="description-title">Professional CV</p>
+                <p class="description-status">Last updated</p>
+            </div>
+
+            <div class="stats">
+                <app-circular-progress [radius]="25" [title]="'Skills coverage'"/>
+                <app-circular-progress [radius]="25"[title]="'Completion'"/>
+            </div>
+            <div class="skills">                                                
+                @for(skill of visibleSkills;track skill){
+                    <mat-chip class="chip">{{skill}}</mat-chip>
+                }
+                @if(skills.length > visibleSkills.length){
+                    <mat-chip class="chip">+{{skills.length - visibleSkills.length}}</mat-chip>
+                }
+            </div>
+        </div>
+    </div>
+</section>

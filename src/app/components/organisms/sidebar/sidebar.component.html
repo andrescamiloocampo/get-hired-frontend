@@ -1,0 +1,22 @@
+<div class="sidebar">
+    <div>
+        <div class="sidebar-head">
+            <img ngSrc="assets/images/contract.png" alt="bussiness-icon" width="50" height="50">
+            <h1 class="title">Get Hired!</h1>            
+        </div>
+        <div>
+            <ul class="sidebar-options">
+                @for(item of sidebarItems; track item.href){
+                    <a class="option" [class.active]="isActive(item.href)" routerLink={{item.href}} >                
+                        <mat-icon>{{item.icon}}</mat-icon>
+                        <p>{{item.title}}</p>
+                    </a>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar-logout">
+        <mat-icon>logout</mat-icon>
+        <p>Sign Out</p>        
+    </div>
+</div>

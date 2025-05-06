@@ -1,0 +1,8 @@
+@let cardIcon = icon(); @let cardSize = size();
+
+<div
+  class="card"
+  [ngStyle]="{ width: cardSize.width, height: cardSize.height }"
+>
+  <mat-icon class="icon">{{ cardIcon }}</mat-icon>
+</div>
