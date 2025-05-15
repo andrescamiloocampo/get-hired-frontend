@@ -1,0 +1,19 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.btn-login{        
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    background: white;
+}
+
+.login-redirection{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;    
+}

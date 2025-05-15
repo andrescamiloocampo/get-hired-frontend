@@ -3,32 +3,32 @@ import { SidebarItem } from "../models/sidebarItem.model";
 export const sidebarItems:SidebarItem[] = [
     {
         title: 'Dashboard',
-        href: 'dashboard',
+        href: '/dashboard',
         icon: 'dashboard'
     },
     {
         title: 'CV Templates',
-        href: 'templates',
+        href: '/dashboard/templates',
         icon: 'document_scanner'
     },
     {
         title: 'My Skills',
-        href: 'skills',
+        href: '/dashboard/skills',
         icon: 'badge'
     },
     {
         title: 'Job Matches',
-        href: 'matches',
+        href: '/dashboard/matches',
         icon: 'work'
     },
     {
         title: 'Profile',
-        href: 'profile',
+        href: '/dashboard/profile',
         icon: 'person'
     },
     {
         title: 'Settings',
-        href: 'settings',
+        href: '/dashboard/settings',
         icon: 'settings'
     },
 ]

@@ -4,6 +4,7 @@ import { sidebarItems } from '../../../datasources';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink,Router, NavigationEnd } from '@angular/router';
 import { SidebarItem } from '../../../models/sidebarItem.model';
+import { AuthService } from '../../../services';
 import { filter } from 'rxjs';
 
 @Component({
@@ -13,19 +14,27 @@ import { filter } from 'rxjs';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent implements OnInit{
+
+  constructor(private authService: AuthService){}
+
   protected sidebarItems:SidebarItem[] = sidebarItems;
   router = inject(Router);
-  currentRoute:string = 'dashboard';
-
-  isActive(route: string){
-    return this.currentRoute === route;
-  }
+  currentRoute:string = '';
 
   ngOnInit(): void {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)      
     ).subscribe((event: NavigationEnd)=>{
-      this.currentRoute = event.urlAfterRedirects.split('/').join('');
+      this.currentRoute = event.urlAfterRedirects.trim();
     });            
+  }
+
+  isActive(route: string){
+    if(this.currentRoute === '') this.currentRoute = '/dashboard';
+    return this.currentRoute === route;
+  }
+
+  logout(){    
+    this.authService.logout();
   }
 }

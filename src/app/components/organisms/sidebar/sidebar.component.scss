@@ -51,11 +51,18 @@
 }
 
 .sidebar-logout{
+    cursor: pointer;
     display: flex;    
     padding: 1rem;
     align-items: center;    
     border-top: solid 1px #334155;
     gap: 0.5rem;
+    transition: background .3s ease-in;
+}
+
+.sidebar-logout:hover{
+    background: #1e3a8a;
+    color: #60a5fa;    
 }
 
 .active{

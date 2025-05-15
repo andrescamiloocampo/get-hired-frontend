@@ -1,17 +1,18 @@
-<div class="header">
-    <app-search-input [placeholder]="'Search templates, skills...'"/>
+@let user = currentUser();
 
+<div class="header">        
+    <app-search-input [placeholder]="'Search templates, skills...'"/>    
     <div class="user-stats">
         <div class="stats-container">
             <mat-icon>notifications_none</mat-icon>            
         </div>
-        <div class="user-space">
-            <div class="user-pic">
-                <mat-icon>person_outline</mat-icon>            
-            </div>
+        <div class="user-space" (click)="redirect()">
+            <div class="user-pic">                
+                <img class="user-image" alt="user" src={{user?.picture}}/>          
+            </div>            
             <div class="user-info">
-                <p class="username">Andrés Ocampo</p>
-                <p class="user-tier">Premium plan</p>
+                <p class="username">{{user?.givenName}}</p>
+                <p class="user-tier">{{user?.role}}</p>
             </div>
         </div>
     </div>    

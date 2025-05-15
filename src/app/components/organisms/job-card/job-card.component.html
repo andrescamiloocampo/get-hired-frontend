@@ -1,0 +1,24 @@
+<div class="job-card">
+    <div class="heading-content">
+        <div class="job-details">
+            <p class="job">
+                {{content.job}}
+            </p>
+            <p class="company">
+                {{content.company}}
+            </p>
+        </div>
+        <p class="job-date"> 
+            {{content.date}}
+        </p>
+    </div>    
+    <div class="job-affinity">
+        <p class="location">
+            <mat-icon>location_on</mat-icon> {{content.location}}
+        </p>
+        <p class="percentage">
+            <app-signal-indicator [percentage]="content.matchPercentage"/>
+            {{content.matchPercentage}}% Match
+        </p>
+    </div>
+</div>

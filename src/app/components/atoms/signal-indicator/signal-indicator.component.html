@@ -1,0 +1,12 @@
+@let progress = percentage();
+
+
+@if(progress >= 0 && progress <= 33){
+    <mat-icon>signal_cellular_alt_1_bar</mat-icon>    
+}@else if (progress > 33 && progress <= 66) {
+    <mat-icon>signal_cellular_alt_2_bar</mat-icon>
+}@else if (progress > 66 && progress <= 100) {
+    <mat-icon>signal_cellular_alt_3_bar</mat-icon>
+} @else {
+    <mat-icon>signal_cellular_null</mat-icon>
+}
