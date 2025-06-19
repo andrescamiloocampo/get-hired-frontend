@@ -1,0 +1,39 @@
+<article class="template-preview">
+  <div class="window-preview">
+    <app-chip [text]="'popular'" class="chip" />
+    <img
+      src="assets/images/preview.jpg"
+      alt="template preview"
+      class="preview-image"
+    />
+    <div class="window-controls">
+      <div class="control">
+        <mat-icon> visibility </mat-icon>
+        <p>Preview</p>
+      </div>
+      <div class="control">
+        <mat-icon> bookmark </mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="heading-content">
+      <h3 class="title">
+        {{ title }}
+      </h3>
+      <app-star-rate [rating]="rating"/>
+    </div>
+    <p class="description">
+      {{ description }}
+    </p>
+    <app-separator></app-separator>
+    <div class="actions-container">
+      <button class="use-template">Use template</button>
+      <div class="actions">
+        <mat-icon class="action">remove_red_eye</mat-icon>
+        <mat-icon class="action">download</mat-icon>
+      </div>
+    </div>
+  </div>
+</article>

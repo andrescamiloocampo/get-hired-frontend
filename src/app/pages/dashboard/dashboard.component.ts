@@ -5,7 +5,8 @@ import {
   DownloadsComponent,
   MatchesViewComponent,
 } from '../../components/organisms';
-import { ActiveCvComponent,TopMatchesComponent } from '../../components/sections';
+import { TopMatchesComponent } from '../../components/sections';
+import { ActiveCvComponent } from '../../components/organisms';
 
 @Component({
   selector: 'app-dashboard',

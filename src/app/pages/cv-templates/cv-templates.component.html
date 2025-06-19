@@ -1,1 +1,24 @@
-<p>cv-templates works!</p>
+<section class="cv-templates">  
+  <div class="heading-content">
+    <h1 class="title">CV Templates</h1>
+    <p class="subtitle">
+      Choose a template that matches your style and industry
+    </p>
+  </div>
+  <div class="filters">
+    @for(tag of tags(); track tag){        
+        <app-filter-btn [label]="tag" [onClick]="handleFilterChange" [isActive]="currentFilter() === tag"/>                    
+    }
+  </div>
+  <div class="templates-container">
+    <app-template-preview [rating]="1" title="Professional" description="Impress your new boss"/>    
+    <app-template-preview [rating]="2" title="Simple" description="Simple design for quick apply"/>
+    <app-template-preview [rating]="3" title="Smart" description="Perfect for scientists"/>
+    <app-template-preview [rating]="4" title="Modern" description="Suitable for tech jobs"/>    
+  </div>
+  <div class="cv-creator">
+    <h2 class="title">Create CV</h2>
+    <p class="subtitle">Once you have a template selected, it's time to create.</p>
+    <app-create-cv/>    
+  </div>
+</section>

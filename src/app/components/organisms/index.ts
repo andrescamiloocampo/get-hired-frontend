@@ -1,7 +1,9 @@
+export { ActiveCvComponent } from "./active-cv/active-cv.component";
+export { DownloadsComponent } from "./downloads/downloads.component";
 export { HeaderComponent } from "./header/header.component";
+export { JobCardComponent } from "./job-card/job-card.component";
+export { MatchesViewComponent } from "./matches-view/matches-view.component";
 export { SidebarComponent } from "./sidebar/sidebar.component";
 export { StrengthComponent } from "./strength/strength.component";
-export { MatchesViewComponent } from "./matches-view/matches-view.component";
-export { DownloadsComponent } from "./downloads/downloads.component";
+export { TemplatePreviewComponent } from './template-preview/template-preview.component';
 export { ViewsComponent } from "./views/views.component";
-export { JobCardComponent } from "./job-card/job-card.component";

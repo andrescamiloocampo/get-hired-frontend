@@ -1,0 +1,12 @@
+<div class="star-rate">
+  @for(star of stars; track star){
+  <mat-icon
+    [ngClass]="{
+      'active-star': star <= rating,
+      'inactive-star': star > rating
+    }"
+  >
+    star
+  </mat-icon>
+  }
+</div>

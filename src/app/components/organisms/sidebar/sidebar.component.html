@@ -1,22 +1,36 @@
-<div class="sidebar">    
-    <div>        
-        <div class="sidebar-head">                        
-            <img ngSrc="assets/images/contract.png" alt="bussiness-icon" width="50" height="50">
-            <h1 class="title">Get Hired!</h1>            
-        </div>
-        <div>
-            <ul class="sidebar-options">
-                @for(item of sidebarItems; track item.href){
-                    <a class="option" [class.active]="isActive(item.href)" routerLink={{item.href}} >                
-                        <mat-icon>{{item.icon}}</mat-icon>
-                        <p>{{item.title}}</p>
-                    </a>
-                }
-            </ul>
-        </div>
+<div class="sidebar" [ngClass]="{ closed: close }">
+  <div>
+    <div class="sidebar-head">
+      <img
+        ngSrc="assets/images/contract.png"
+        alt="bussiness-icon"
+        width="50"
+        height="50"
+      />
+      <h1 class="title" [ngClass]="{ 'title-closed': close }">Get Hired!</h1>
     </div>
-    <div class="sidebar-logout" (click)="logout()">
-        <mat-icon>logout</mat-icon>
-        <p>Sign Out</p>        
+    <div>
+      <ul class="sidebar-options">
+        @for (item of sidebarItems; track item.href) {
+        <a
+          class="option"
+          [class.active]="isActive(item.href)"
+          [ngClass]="{ 'option-closed': close }"
+          routerLink="{{ item.href }}"
+        >
+          <mat-icon class="option-icon">{{ item.icon }}</mat-icon>
+          <p class="opt-text" [ngClass]="{ 'opt-closed': close }">{{ item.title }}</p>
+        </a>
+        }
+      </ul>
     </div>
+    <button class="close-btn" [ngClass]="{ 'close-btn-active': close }" (click)="closeSideBar()">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+  <div class="sidebar-logout" [ngClass]="{ 'sidebar-logout-close': close }" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    <p class="logout-text" [ngClass]="{ 'opt-closed': close }">Sign Out</p>
+  </div>
 </div>
+

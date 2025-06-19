@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import { sidebarItems } from '../../../datasources';
-import { NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage,NgClass } from '@angular/common';
 import { RouterLink,Router, NavigationEnd } from '@angular/router';
 import { SidebarItem } from '../../../models/sidebarItem.model';
 import { AuthService } from '../../../services';
@@ -9,7 +9,7 @@ import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [MatIconModule, NgOptimizedImage,RouterLink],
+  imports: [MatIconModule, NgOptimizedImage,NgClass,RouterLink],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
@@ -18,8 +18,9 @@ export class SidebarComponent implements OnInit{
   constructor(private authService: AuthService){}
 
   protected sidebarItems:SidebarItem[] = sidebarItems;
-  router = inject(Router);
-  currentRoute:string = '';
+  protected close: boolean = false;
+  private router = inject(Router);
+  private currentRoute:string = '';
 
   ngOnInit(): void {
     this.router.events.pipe(
@@ -36,5 +37,9 @@ export class SidebarComponent implements OnInit{
 
   logout(){    
     this.authService.logout();
+  }
+
+  closeSideBar(){
+    this.close = !this.close;
   }
 }

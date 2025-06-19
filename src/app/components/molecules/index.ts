@@ -1,0 +1,1 @@
+export { StarRateComponent } from "./star-rate/star-rate.component";

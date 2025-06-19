@@ -1,0 +1,20 @@
+<section class="create-cv">
+  <div class="cv-prompter">
+    <textarea
+      class="job-prompt"
+      name="job prompt"
+      id=""
+      placeholder="What do they ask for in your new job?"
+      [formControl]="jobPromptCtl"
+    ></textarea>
+
+    <button class="generate" (click)="generateCV()">
+      Generate CV
+      <span class="shine star1"></span>
+      <span class="shine star2"></span>
+      <span class="shine star3"></span>
+    </button>
+  </div>
+  
+  <iframe [src]="cvUrl | safeResourceUrl" width="500px" height="600px" frameborder="0"></iframe>
+</section>
