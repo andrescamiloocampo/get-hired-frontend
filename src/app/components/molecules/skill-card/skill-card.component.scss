@@ -1,0 +1,47 @@
+.skill-card{
+    display: flex;
+    padding: 0.5rem;
+    min-width: 140px;
+    max-width: 200px;    
+    flex-grow: 1;
+    align-items: center;
+    background: #374151;
+    border: solid 1px #4b5563;
+    border-radius: 0.5rem;
+    color: white;
+    position: relative;
+}
+
+.skill-name{
+    font-weight: 500;
+}
+
+.skill-level{
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.content{
+    padding: 0 0.5rem;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    background: #3b82f6;
+    border-radius: 10rem;
+}
+
+.close{
+    background: none;
+    border: none;
+    position: absolute;    
+    padding: 0.2rem 0;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+.icon-close{
+    font-size: 1rem;
+}

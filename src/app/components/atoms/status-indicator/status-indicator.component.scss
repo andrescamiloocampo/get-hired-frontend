@@ -1,0 +1,22 @@
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9ca3af;
+    border: solid 2px #4b5563;
+    padding: 0.5rem;    
+    border-radius: 10rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.icon{
+    width: fit-content;
+    height: fit-content;
+    font-size: 2rem;
+}
+
+.active{
+    background: #3b82f6;
+    color: white;
+    border: solid 2px #3b82f6;
+}

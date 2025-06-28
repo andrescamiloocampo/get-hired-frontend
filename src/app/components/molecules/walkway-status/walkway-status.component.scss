@@ -1,0 +1,55 @@
+.walkway{
+    width: 100%;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.steps-container{
+    width: 100%;
+    display: flex;    
+    justify-content: center;
+}
+
+.step{
+    display: flex;
+    align-items: center;
+}
+
+.current-step{
+    color: #9ca3af;
+}
+
+.connector{
+    width: 100px;
+    height: 2px;    
+    background: #4b5563;
+}
+
+.active-connector {
+    position: relative;    
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background: #3b82f6;
+        z-index: 1;
+        animation: fill-bar 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+}
+
+@keyframes fill-bar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}

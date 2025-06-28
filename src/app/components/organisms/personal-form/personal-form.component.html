@@ -1,0 +1,38 @@
+<div class="personal-form">
+  <div class="heading-content">
+    <h1 class="title">Personal information</h1>
+    <p class="description">Let's start with your basic details</p>
+  </div>
+  <div action="" class="input-group">
+    <div class="input">
+      <label for="phone"> Phone number </label>
+      <input
+        type="text"
+        id="phone"
+        [formControl]="phoneNumber"
+        placeholder="+1 (555) 123-4567"
+      />
+    </div>
+
+    <div class="input">
+      <label for="location"> Location </label>
+      <input
+        type="text"
+        id="location"
+        [formControl]="location"
+        placeholder="City, State/Country"
+      />
+    </div>
+
+    <div class="input">
+      <label for="summary"> Professional Summary </label>
+      <textarea
+        class="summary"
+        name=""
+        id="summary"
+        placeholder="Brief description of your professional background and career objectives..."
+        [formControl]="summary"
+      ></textarea>
+    </div>
+  </div>
+</div>

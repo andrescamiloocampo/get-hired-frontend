@@ -9,10 +9,9 @@
 .cv-prompter{
     display: flex;
     gap: 1rem;      
-    min-width: 300px;    
+    min-width: 600px;    
     flex-direction: column;
-    max-width: none;
-    flex: 1; 
+    max-width: none;    
 }
 
 .current-cv{
@@ -119,4 +118,28 @@
             opacity: 0;
         }
     }
+}
+
+#docx-container {
+  width: 600px; // o el ancho que desees
+  height: 100%;  
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#docx-container .docx-page {
+  width: 100% !important;
+  height: auto !important;
+  transform-origin: top left;  
+  transform: none !important;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;  
+  max-width: 100%;
+  overflow: hidden;
+  display: block;
 }

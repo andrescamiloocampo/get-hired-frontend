@@ -1,6 +1,8 @@
+@let user = currentUser();
+
 <section class="main-dashboard">
   <p class="title">Dashboard</p>
-  <div class="subtitle">Welcome back, Andres. Your CV is getting noticed!</div>
+  <div class="subtitle">Welcome back, {{user?.givenName}}. Your CV is getting noticed!</div>
   <div class="insights">
     <div class="profile-strength">
       <app-strength [progress]="80" />
@@ -18,16 +20,20 @@
 
   <div class="main-container">
     <div class="job-container">
-      <div class="active-cv">
-        <app-active-cv />
+      <div class="job-section">
+        <div class="active-cv">
+          <app-active-cv />
+        </div>
+        <div class="recent-activity">
+          <app-recent-activity />
+        </div>
       </div>
-      <div class="top-job-matches">
-        <app-top-matches />         
+      <div class="matches-section">
+        <div class="top-job-matches">
+          <app-top-matches />
+        </div>
+        <div class="skills-breakdown">Skills Breakdown</div>
       </div>
-    </div>
-    <div class="stats-container">
-      <div class="recent-activity">Recent Activity</div>
-      <div class="skills-breakdown">Skills Breakdown</div>
-    </div>
+    </div>    
   </div>
 </section>

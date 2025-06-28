@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import type { CVPromptModel } from '../models';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -16,11 +17,17 @@ export class AgentService {
     return this.http.get(`${this.baseUrl}/agent`);
   }
 
-  public createCV(prompt: CVPromptModel){    
-    return this.http.post(`${this.baseUrl}/files/create`,prompt,{
-        headers:{
-            'Content-Type':'application/json'
-        }
-    })
+  public createCV(prompt: CVPromptModel) {
+    return this.http.post(`${this.baseUrl}/files/create`, prompt, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
+
+  public loadDocx():Observable<Blob> {
+    return this.http.get(`${this.baseUrl}/files/getCV`, {
+      responseType: 'blob',
+    });
   }
 }

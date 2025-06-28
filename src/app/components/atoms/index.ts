@@ -5,3 +5,4 @@ export { IconCardComponent } from "./icon-card/icon-card.component";
 export { SearchInputComponent } from "./search-input/search-input.component";
 export { SeparatorComponent } from './separator/separator.component';
 export { SignalIndicatorComponent } from './signal-indicator/signal-indicator.component';
+export { StatusIndicatorComponent } from './status-indicator/status-indicator.component';

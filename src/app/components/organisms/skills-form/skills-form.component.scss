@@ -1,0 +1,151 @@
+.personal-form{
+    width: 650px;
+    min-width: 300px;
+    display: flex;        
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;    
+    gap: 1rem;
+    background: #1f2937;
+    border-radius: 0.5rem;
+}
+
+.heading-content{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.title{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.description{
+    color: #9ca3af;
+}
+
+.input-group{
+    display: flex;        
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;    
+}
+
+.input label{
+    color: white;
+    font-weight: 500;
+}
+
+.input input,select{
+    padding: 0.7rem 1rem;
+    background: #374151;
+    width: 100%;
+    border: solid 1px #4b5563;
+    border-radius: 0.5rem;
+    color: white;    
+}
+
+.input input::placeholder{
+    color: #616872;
+}
+
+.summary{
+    padding: 0.7rem 1rem;
+    background: #374151;
+    width: 100%;
+    height: 150px;
+    border: solid 1px #4b5563;
+    border-radius: 0.5rem;
+    color: white;     
+    resize: none;    
+}
+
+.summary::placeholder{
+    color: #616872;
+}
+
+.add-skill-btn{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+    background: #3b82f6;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.skills-container{
+    width: 100%;    
+}
+
+.skills-title{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500px;
+}
+
+.custom-toast {
+  .p-toast {
+    background: #111827 !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+  .p-toast-message {
+    background: #1f2937 !important;
+    color: #f3f4f6 !important;
+    border-left: 5px solid #3b82f6 !important;
+    border-radius: 0.5rem !important;
+    font-family: inherit;
+  }
+  .p-toast-message-success {
+    border-left-color: #10b981 !important;
+  }
+  .p-toast-message-warn {
+    border-left-color: #f59e42 !important;
+  }
+  .p-toast-message-error {
+    border-left-color: #ef4444 !important;
+  }
+  .p-toast-icon-close {
+    color: #9ca3af !important;
+  }
+  .p-toast-message-text {
+    color: #f3f4f6 !important;
+  }
+}
+
+.skills{
+    display: flex;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+    height: 100px;
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+
+.skills::-webkit-scrollbar {
+  width: 6px;
+  background: #374151;
+  border-radius: 4px;
+}
+
+.skills::-webkit-scrollbar-thumb {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+.skills::-webkit-scrollbar-track {
+  background: transparent;
+}

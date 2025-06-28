@@ -13,4 +13,12 @@ export class TemplatePreviewComponent {
   @Input() rating: number = 0;
   @Input() title: string = 'Professional';
   @Input() description: string = 'A clean, modern template suitable for all industries'
+  @Input() onClick: (template: string) => void = ()=>{};
+  
+  public setTemplate(): void{    
+    if(this.onClick){
+      console.log('On')
+      this.onClick(this.title);
+    }
+  }
 }

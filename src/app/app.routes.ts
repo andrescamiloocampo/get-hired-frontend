@@ -6,18 +6,22 @@ import {
   ProfileComponent,
   SettingsComponent,
   SkillsComponent,
+  GetStartedComponent
 } from './pages';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth-guard.guard';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { EnrollmentGuard } from './guards/enrollment-guard.guard';
+import { ActiveEnrollmentGuard } from './guards/active-enrollment.guard';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'getStarted', component: GetStartedComponent, canActivate: [AuthGuard,EnrollmentGuard]},
   {
     path: 'dashboard',
     component: MainLayoutComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard,ActiveEnrollmentGuard],
     children: [
       { path: '', component: DashboardComponent },
       { path: 'templates', component: CvTemplatesComponent },

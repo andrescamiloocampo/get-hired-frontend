@@ -1,0 +1,41 @@
+<div class="personal-form">
+  <div class="heading-content">
+    <h1 class="title">Technical Skills</h1>
+    <p class="description">Add your technical skills and expertise levels</p>
+  </div>
+  <div action="" class="input-group">
+    <div class="input">
+      <label for="skill">Add new skill</label>
+      <input
+        type="text"
+        id="skill"
+        [formControl]="skill"
+        placeholder="e.g. JavaScript, Python, React..."
+      />
+    </div>
+    <div class="input">
+      <label for="level">Level</label>
+      <select class="level-selector" id="level" [formControl]="level">
+        <option value="Begginer">Begginer</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+    <button class="add-skill-btn" (click)="addSkill()">
+      <mat-icon>add</mat-icon> Add
+    </button>
+  </div>
+
+  <p-toast position="bottom-center" styleClass="custom-toast"></p-toast>
+
+  @if(skills.length > 0){
+  <div class="skills-container">
+    <p class="skills-title">Skills</p>
+    <ul class="skills">
+      @for(skill of skills; track skill.name){
+        <app-skill-card [name]="skill.name" [level]="skill.level" [onClick]="deleteSkill"></app-skill-card>
+      }
+    </ul>
+  </div>
+  }
+</div>

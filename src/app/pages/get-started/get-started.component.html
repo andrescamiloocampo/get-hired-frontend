@@ -1,0 +1,28 @@
+<div class="get-started">
+    <h1 class="title">Welcome to Get Hired!</h1>
+    <p class="description">Please tell us about yourself</p>
+
+    <div class="steps-form">
+        <app-walkway-status [items]="steps" [currentState]="currentState"/>
+    </div>
+
+    <div class="forms-container">
+        @if(currentState === 0){
+            <app-personal-form/>
+        }
+    
+        @if(currentState === 1){
+            <app-skills-form/>
+        }
+    
+        @if(currentState === 2){
+            <p>Jobs</p>
+        }
+    </div>
+
+    <div class="step-controls">
+        <button (click)="rollbackCurrentState()">Previous</button>    
+        <button (click)="updateCurrentState()">Next</button>    
+    </div>
+</div>
+

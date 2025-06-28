@@ -4,3 +4,4 @@ export { MatchesComponent } from "./matches/matches.component";
 export { ProfileComponent } from "./profile/profile.component";
 export { SettingsComponent } from "./settings/settings.component";
 export { SkillsComponent } from "./skills/skills.component";
+export { GetStartedComponent } from "./get-started/get-started.component";

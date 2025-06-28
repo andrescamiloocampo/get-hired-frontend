@@ -25,8 +25,7 @@
     max-width: 300px;
 }
 
-.active-cv {    
-    flex: 2 2 200px;   
+.active-cv {         
     max-width: 500px; 
     min-width: 300px;    
     height: fit-content;
@@ -35,18 +34,18 @@
 
 .top-job-matches {
     flex: 1 1 550px;    
-    max-width: 700px;   
+    max-width: 755px;   
     height: 620px;     
 }
 
-.recent-activity {
-    grid-area: recent-activity;
-    background-color: #7dd3fc;
+.recent-activity {        
+    flex: 1;
+    height: 100%;
 }
 
-.skills-breakdown {
-    grid-area: skills-breakdown;
+.skills-breakdown {    
     background-color: #bae6fd;
+    max-width: 755px;   
 }
 
 .main-container{
@@ -65,4 +64,15 @@
     flex-wrap: wrap;
 }
 
+.job-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
+.matches-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}

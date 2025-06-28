@@ -7,3 +7,8 @@ export { SidebarComponent } from "./sidebar/sidebar.component";
 export { StrengthComponent } from "./strength/strength.component";
 export { TemplatePreviewComponent } from './template-preview/template-preview.component';
 export { ViewsComponent } from "./views/views.component";
+export { CvPlaceholderComponent } from "./cv-placeholder/cv-placeholder.component";
+export { CvPreviewComponent } from "./cv-preview/cv-preview.component";
+export { RecentActivityComponent } from "./recent-activity/recent-activity.component";
+export { PersonalFormComponent } from "./personal-form/personal-form.component";
+export { SkillsFormComponent } from "./skills-form/skills-form.component";

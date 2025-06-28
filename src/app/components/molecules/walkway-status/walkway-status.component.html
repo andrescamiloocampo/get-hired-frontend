@@ -1,0 +1,16 @@
+<div class="walkway">
+    <div class="steps-container">
+        @for(item of items; track item.id){
+            <div class="step">
+                <app-status-indicator [iconName]="item.iconName" [active]="item.id <= currentState" [done]="item.id < currentState"/>
+                @if(item.id != 2){
+                    <div class="connector" [ngClass]="{'active-connector':item.id < currentState}"></div>
+                }
+            </div>
+        }    
+    </div>
+    <p class="current-step">
+        Step {{currentState + 1}} of {{items.length}}
+    </p>
+</div>
+

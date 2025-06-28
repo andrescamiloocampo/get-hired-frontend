@@ -20,7 +20,13 @@ export class CvTemplatesComponent {
     'Modern',
   ]);
   public currentFilter = signal<string>(this.tags()[0] ?? '');
+  protected currentTemplate = signal<string>('');
   private isBrowser: boolean;
+  protected templates: { name: string; category: string; description: string }[] = [
+    { name: 'Harvard', category: 'Simple', description: 'A clean and minimal template for any industry.' },
+    { name: 'Professional', category: 'Professional', description: 'Impress your new boss.' },
+    { name: 'Smart', category: 'Smart', description: 'A modern template with smart highlights.' },  
+  ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     this.isBrowser = isPlatformBrowser(this.platformId);
@@ -29,7 +35,17 @@ export class CvTemplatesComponent {
     }
   }
 
-  handleFilterChange = (label: string): void => {
+  public setCurrentTemplate = (template: string):void => {
+    this.currentTemplate.set(template);
+  }
+
+  public handleFilterChange = (label: string): void => {
     this.currentFilter.set(label);
+  };
+
+  public filteredTemplates = () => {
+    const filter = this.currentFilter();
+    if (filter === 'All Templates') return this.templates;
+    return this.templates.filter(t => t.category === filter);
   };
 }
